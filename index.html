@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="/img/icons8-morty-smith.svg" type="image/x-icon"> />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Personajes</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="/img/icons8-verano-smith.svg" alt="Logo Rick" class="logo">
+  <h1>Rick and Morty App</h1>
+  <nav>
+    <a href="/index.html">Personajes</a>
+  </nav>
+</header>
+
+    <main class="main">
+          <h1>Personajes</h1>
+          <input type="text" id="busqueda" placeholder="Buscar por nombre..." autocomplete="off" />
+          <ul id="sugerencias" class="sugerencias-lista"></ul>
+          <select id="filtroEstado">
+           <option value="">Estado</option>
+           <option value="alive">Vivo</option>
+           <option value="dead">Muerto</option>
+           <option value="unknown">Desconocido</option>
+          </select>
+          <div id="personajes"></div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Rick and Morty App</p>
+    </footer>
+
+
+    <script type="module"   src="./src/main.js"></script>
+  </body>
+</html>
