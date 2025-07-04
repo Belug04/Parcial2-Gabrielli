@@ -35,5 +35,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
+
 mostrarDetalle(); // Llama a la función mostrarDetalle para que se ejecute y muestre los detalles del personaje al cargar la página.
 

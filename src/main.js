@@ -1,4 +1,4 @@
-const contenedor = document.getElementById("personajes"); // Contenedor donde se mostrarán los personajes
+const contenedor = document.getElementById("personajes");  // Contenedor donde se mostrarán los personajes
 // Selecciona el elemento con el ID "personajes" del DOM, que es donde se mostrarán los personajes obtenidos de la API.
 // Este elemento debe existir en el HTML para que el script funcione correctamente.
 // Si no existe, el script no podrá agregar los personajes a la página.
@@ -9,7 +9,7 @@ const contenedor = document.getElementById("personajes"); // Contenedor donde se
 const input = document.getElementById("busqueda"); // Campo de búsqueda para filtrar personajes por nombre
 const filtroEstado = document.getElementById("filtroEstado"); // Filtro para seleccionar el estado de los personajes (vivo, muerto, desconocido)
 const sugerencias = document.getElementById("sugerencias");
-
+// Selecciona el elemento con el ID "busqueda" del DOM, que es un campo de entrada donde el usuario puede escribir el nombre de un personaje.
 // Función para cargar personajes desde la API de Rick and Morty
 // Esta función realiza una solicitud a la API de Rick and Morty para obtener personajes filtrados
 // y los muestra en el contenedor especificado. Si no se encuentran resultados o hay un error, muestra un mensaje de error.
@@ -63,7 +63,6 @@ input.addEventListener("input", async () => {
     sugerencias.innerHTML = ""; // Si no hay resultados
   }
 });
-
 
 input.addEventListener("input", () => cargarPersonajes(input.value, filtroEstado.value)); // Escucha el evento de entrada en el campo de búsqueda y llama a cargarPersonajes con el valor actual del campo y el estado seleccionado
 // Cuando el usuario escribe en el campo de búsqueda, se llama a la función cargarPersonajes

@@ -17,15 +17,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   box-sizing: border-box;
   position: fixed;
-  height: 10vh;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: none;
 }
 
 .header.scrolled {
@@ -43,13 +41,14 @@ body {
 .header h1 {
   flex: 1;
   text-align: center;
-  font-size: 1.4rem;
   margin: 0;
+  font-size: 1.4rem;
 }
 
 .header nav {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .header nav a {
@@ -62,8 +61,6 @@ body {
 .header nav a:hover {
   opacity: 0.8;
 }
-
-
 
 main{
   flex: 1;
@@ -353,25 +350,7 @@ select {
 /* ---------- MEDIA QUERIES ---------- */
 
 /* Navbar */
-@media screen and (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
 
-  .header h1 {
-    text-align: center;
-  }
-
-  .header nav {
-    justify-content: center;
-  }
-
-  .logo {
-    margin: 0;
-  }
-}
 
 /* Pantallas grandes (escritorio) */
 @media screen and (min-width: 1024px) {
@@ -391,12 +370,45 @@ select {
     width: auto;
     margin: 0.5rem;
   }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .navbar {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .header h1 {
+    text-align: center;
+    flex: 1;
+  }
 }
+
 
 /* Pantallas medianas (tablets) */
 @media screen and (min-width: 600px) and (max-width: 1023px) {
   .tarjeta {
     flex: 1 1 calc(50% - 2rem); /* 2 tarjetas por fila */
+  }
+  .header {
+    flex-direction:row;
+    align-items:center;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:normal;
+    gap: 0.5rem;
+  }
+
+  .header h1 {
+    margin: 0.5rem 0;
   }
 }
 
@@ -411,5 +423,33 @@ select {
     width: 100%;
     max-width: none;
   }
-}
 
+  .header {
+    flex-direction:row;
+    text-align: center;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .header h1 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .navbar a {
+    padding: 0.5rem 0;
+  }
+
+  .logo {
+    height: 35px;
+    margin-bottom: 0.5rem;
+  }
+
+  
+}
