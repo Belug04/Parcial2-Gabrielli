@@ -414,42 +414,41 @@ select {
 
 /* Pantallas pequeñas (celulares) */
 @media screen and (max-width: 599px) {
-  .tarjeta {
-    flex: 1 1 100%; /* 1 tarjeta por fila */
-  }
-
-  input,
-  select {
-    width: 100%;
-    max-width: none;
-  }
-
   .header {
-    flex-direction:row;
-    text-align: center;
-    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
+    padding: 1rem;
+    text-align: center;
   }
 
-  .header h1 {
-    font-size: 1rem;
-    margin: 0.5rem 0;
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titulo-app {
+    font-size: 1.1rem;
   }
 
   .navbar {
     flex-direction: column;
-    width: 100%;
     gap: 0.5rem;
+    width: 100%;
   }
 
-  .navbar a {
-    padding: 0.5rem 0;
+  input,
+  select {
+    width: 90%;
+    max-width: 100%;
+    margin: 0.5rem auto;
+    display: block;
   }
 
-  .logo {
-    height: 35px;
-    margin-bottom: 0.5rem;
+  .tarjeta {
+    width: 90%;
+    margin: 1rem auto;
   }
+}
 
   
-}
